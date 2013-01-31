@@ -1,0 +1,31 @@
+Name:                cabal-signature
+Version:             0.0.1
+Description:         Extension to cabal to provide cryptographic signature and package verification
+License:             BSD3
+License-file:        LICENSE
+Copyright:           Vincent Hanquez <vincent@snarc.org>
+Author:              Vincent Hanquez <vincent@snarc.org>
+Maintainer:          Vincent Hanquez <vincent@snarc.org>
+Synopsis:            Cabal plugin for signature and verification
+Category:            Cryptography
+Build-Type:          Simple
+Homepage:            http://github.com/vincenthz/cabal-signature
+Cabal-Version:       >=1.8
+
+Executable           cabal-signature
+  Main-is:           Main.hs
+  hs-source-dirs:    Src
+  Build-Depends:     base >= 4 && < 5
+                   , bytestring
+                   , crypto-pubkey-types >= 0.2 && < 0.3
+                   , crypto-pubkey
+                   , cryptohash
+                   , cprng-aes
+                   , certificate
+                   , directory
+                   , filepath
+  ghc-options:       -Wall
+
+source-repository head
+  type:     git
+  location: git://github.com/vincenthz/cabal-signature
